@@ -1,2 +1,17 @@
 # Git useful commands
 
+
+git reset --hard origin/master
+git clean -dfx
+
+git rebase master
+git rebase origin/master
+
+git push origin HEAD:refs/for/master
+git push origin HEAD:refs/for/stable-1.0
+
+git stash list
+git stash
+git stash pop
+
+git cherry-pick <numer>
