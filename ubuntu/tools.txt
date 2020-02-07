@@ -1,0 +1,68 @@
+# Links:
+    https://wiki.gnome.org/Apps
+
+# Tools
+
+
+## GNOME Tweaks
+    https://itsfoss.com/gnome-tweak-tool/
+
+    sudo add-apt-repository universe
+    sudo apt install gnome-tweak-tool
+    
+    gnome-tweaks
+
+## KeePass
+    https://keepass.info/
+
+    sudo apt-add-repository ppa:jtaylor/keepass
+    sudo apt-get update
+    sudo apt-get install keepass2
+
+## Net Tools
+    sudo apt install net-tools
+
+## automake
+    sudo apt install automake
+
+## htop
+    https://hisham.hm/htop/
+
+    sudo apt  install htop
+
+## Putty
+    https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+    https://websiteforstudents.com/installing-putty-on-ubuntu-16-04-17-10-18-04/
+
+## GUI client to view git repositories
+    https://wiki.gnome.org/Apps/Gitg/
+
+    sudo apt install gitg
+
+## Log explorer
+    https://glogg.bonnefon.org/
+
+    sudo apt install glogg
+
+## Visual diff and merge tools
+    https://meldmerge.org/
+
+    sudo apt install meld
+
+## Visual Studio Code
+    https://code.visualstudio.com/
+    https://code.visualstudio.com/docs/setup/linux
+
+## Notepad++
+    https://notepad-plus-plus.org/
+
+    sudo snap install notepad-plus-plus
+
+## Notepadqq
+    https://itsfoss.com/notepadqq-notepad-for-linux/
+
+    sudo add-apt-repository ppa:notepadqq-team/notepadqq
+    sudo apt-get update
+    sudo apt-get install notepadqq
+
+## 

@@ -1,0 +1,11 @@
+# SSH Server on Ubuntu
+    https://help.ubuntu.com/community/SSH/OpenSSH/Configuring
+    https://linuxize.com/post/how-to-enable-ssh-on-ubuntu-18-04/
+
+## Generate SSH key
+    https://www.ssh.com/ssh/keygen
+
+    ssh-keygen -t rsa -b 4096 -C A.Czerwinski@pistacje.net
+
+## 
+    ssh -T git@github.com
