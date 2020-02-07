@@ -14,4 +14,9 @@ git stash list
 git stash
 git stash pop
 
-git cherry-pick <numer>
+git cherry-pick <number>
+
+git rev-list -n 1 --before="2016-10-07 1:00" origin/master
+
+git checkout `git rev-list -n 1 --before="2016-10-07 1:00" origin/master`
+
