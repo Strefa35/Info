@@ -4,6 +4,10 @@
 git reset --hard origin/master
 git clean -dfx
 
+## Remove last commit from local & remote
+git reset --hard HEAD^
+git push origin -f
+
 git rebase master
 git rebase origin/master
 
