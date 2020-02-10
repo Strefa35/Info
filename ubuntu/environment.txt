@@ -1,0 +1,33 @@
+
+sudo vi /etc/environment
+
+
+## How to Install GCC Compiler on Ubuntu 18.04
+    https://linuxize.com/post/how-to-install-gcc-compiler-on-ubuntu-18-04/
+
+    sudo apt install build-essential
+    sudo apt-get install manpages-dev
+    gcc --version
+    
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+
+    sudo apt install gcc-7 g++-7 gcc-8 g++-8 gcc-9 g++-9
+    
+    sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 90 --slave /usr/bin/g++ g++ /usr/bin/g++-9 --slave /usr/bin/gcov gcov /usr/bin/gcov-9
+    sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-8 80 --slave /usr/bin/g++ g++ /usr/bin/g++-8 --slave /usr/bin/gcov gcov /usr/bin/gcov-8
+    sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-7 70 --slave /usr/bin/g++ g++ /usr/bin/g++-7 --slave /usr/bin/gcov gcov /usr/bin/gcov-7
+    
+    sudo update-alternatives --config gcc
+    
+
+## How to Install Java on Ubuntu 18.04
+    https://linuxize.com/post/install-java-on-ubuntu-18-04/
+    
+    sudo apt update
+    java -version
+    sudo apt install default-jre
+    
+    sudo update-alternatives --config java
+    
+    
