@@ -1,0 +1,9 @@
+## Sites
+https://wiki.rdkcentral.com
+https://code.rdkcentral.com
+
+## Getting Started with the Code
+https://wiki.rdkcentral.com/pages/viewpage.action?spaceKey=CMF&title=Getting+Started+with+the+Code
+
+## Download and Build Documentation
+https://wiki.rdkcentral.com/display/RDK/Download+and+Build+Documentation
