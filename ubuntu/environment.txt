@@ -31,3 +31,9 @@ sudo vi /etc/environment
     sudo update-alternatives --config java
     
     
+## Python 2 & 3 together
+
+    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
+    sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2
+
+    sudo update-alternatives --config python
