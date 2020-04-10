@@ -9,3 +9,7 @@
 
 ## 
     ssh -T git@github.com
+
+## SSH FS - mount remote file system
+    https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
+
