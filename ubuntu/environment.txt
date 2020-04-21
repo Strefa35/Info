@@ -37,3 +37,7 @@ sudo vi /etc/environment
     sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2
 
     sudo update-alternatives --config python
+
+## How to permanently set $PATH variable
+
+    https://hackprogramming.com/2-ways-to-permanently-set-path-variable-in-ubuntu/
