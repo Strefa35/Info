@@ -9,7 +9,7 @@
 
     sudo add-apt-repository universe
     sudo apt install gnome-tweak-tool
-    
+
     gnome-tweaks
 
 ## KeePass
@@ -65,7 +65,24 @@
     sudo apt-get update
     sudo apt-get install notepadqq
 
-## Kitty
+## Kitty Terminal
     https://sw.kovidgoyal.net/kitty
-    
-    
+
+    https://sw.kovidgoyal.net/kitty/binary.html#desktop-integration-on-linux
+
+## Remmina
+    https://remmina.org/
+
+## diff-so-fancy
+    https://github.com/so-fancy/diff-so-fancy
+
+    mkdir ~/.local/diff-so-fancy
+
+    cd ~/.local/
+    git clone https://github.com/so-fancy/diff-so-fancy.git
+
+    git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+
+## Tig: text-mode interface for Git
+    https://jonas.github.io/tig/
+
