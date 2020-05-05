@@ -28,7 +28,7 @@
 ## htop
     https://hisham.hm/htop/
 
-    sudo apt  install htop
+    sudo apt install htop
 
 ## Putty
     https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
@@ -94,3 +94,13 @@
     
     https://github.com/tmux/tmux/wiki
     
+## minicom
+    https://help.ubuntu.com/community/Minicom
+    http://manpages.ubuntu.com/manpages/trusty/man1/minicom.1.html
+
+    sudo apt-get install minicom
+
+    dmesg | grep tty
+    
+    sudo adduser $USER dialout
+
