@@ -33,8 +33,21 @@ sudo vi /etc/environment
     
 ## Python 2 & 3 together
 
-    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
-    sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2
+    sudo apt update
+    sudo apt install software-properties-common
+    sudo add-apt-repository ppa:deadsnakes/ppa
+    sudo apt install python3.8
+    sudo apt install python3.9
+
+    sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1
+    sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.9 2
+
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.6 1
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 2
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.8 3
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.9 4
+sudo update-alternatives --install /usr/bin/python python /usr/bin/python2.7 10
+
 
     sudo update-alternatives --config python
 
