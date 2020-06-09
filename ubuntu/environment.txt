@@ -110,7 +110,7 @@ sudo vi /etc/environment
 
     sudo systemctl status tftpd-hpa
     
-  #Restart:
+  ## Restart:
     sudo service tftpd-hpa restart    
 
   ## Test

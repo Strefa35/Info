@@ -7,4 +7,4 @@ Useful information
 
 ## Ubuntu
 
-
+  [Python C/C++ wrapper](./ubuntu/python.md)
