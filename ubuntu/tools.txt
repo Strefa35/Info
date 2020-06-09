@@ -83,6 +83,13 @@
 
     git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
+    ## modify .profile file 
+    
+    # set PATH to diff-so-fancy tool if it exists
+    if [ -d "$HOME/.local/diff-so-fancy" ] ; then
+        PATH="$HOME/.local/diff-so-fancy:$PATH"
+    fi
+
 ## Tig: text-mode interface for Git
     https://jonas.github.io/tig/
 
