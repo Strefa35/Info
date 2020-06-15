@@ -84,23 +84,34 @@
     git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
     ## modify .profile file 
-    
+
     # set PATH to diff-so-fancy tool if it exists
     if [ -d "$HOME/.local/diff-so-fancy" ] ; then
         PATH="$HOME/.local/diff-so-fancy:$PATH"
     fi
 
+    === as root ===
+    cd /usr/local/bin    
+    git clone https://github.com/so-fancy/diff-so-fancy.git
+    git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+    vi /etc/environment
+    add path to PATH="... :/usr/local/bin/diff-so-fency"
+
+## Git scripts
+    https://github.com/jwiegley/git-scripts
+
+## git-forest
+    https://github.com/takaaki-kasai/git-foresta
+
 ## Tig: text-mode interface for Git
     https://jonas.github.io/tig/
 
 ## Screen & tmux
-
     https://www.gnu.org/software/screen/
-    
-## tmux    
-    
+
+## tmux
     https://github.com/tmux/tmux/wiki
-    
+
 ## minicom
     https://help.ubuntu.com/community/Minicom
     http://manpages.ubuntu.com/manpages/trusty/man1/minicom.1.html
@@ -108,6 +119,6 @@
     sudo apt-get install minicom
 
     dmesg | grep tty
-    
+
     sudo adduser $USER dialout
 
