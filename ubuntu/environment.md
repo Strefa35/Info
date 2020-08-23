@@ -117,5 +117,34 @@ sudo vi /etc/environment
     tftp 192.168.1.102
     get test.txt
 
-    
-   
+# NGinx
+
+  ## Install
+    https://www.cyberciti.biz/faq/install-and-configure-nginx-on-ubuntu-linux-18-04-lts/
+    https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
+
+    sudo apt install nginx
+
+  ## Configure
+
+    sudo nano /etc/nginx/nginx.conf
+
+
+  ## Enable Nginx server at boot time using the systemctl command:
+    $ sudo systemctl enable nginx
+
+  ## Start Nginx server using the systemctl command:
+    $ sudo systemctl start nginx
+
+  ## Restart Nginx server using the systemctl command:
+    $ sudo systemctl restart nginx
+
+  ## Stop Nginx server using the systemctl command:
+    $ sudo systemctl stop nginx
+
+  ## Reload Nginx server using the systemctl command:
+    $ sudo systemctl reload nginx
+
+  ## Get status of Nginx server using the systemctl command:
+    $ sudo systemctl status nginx
+
