@@ -15,6 +15,14 @@
     git add *
     git commit
 
+## git clone
+
+    # Clone project from GitHub
+    git clone git@github.com:<user>/project.git
+
+    # Initialize, update or inspect submodules
+    git submodule update --init --recursive
+
 ## git push 
 
     git remote add origin https://github.com/<user>/project.git
