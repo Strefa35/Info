@@ -16,10 +16,11 @@ Useful information
   * [SSH](./win/ssh.md)
   * [Tools](./win/tools.md)
 
-## Ubuntu
-  * [Environment](./ubuntu/environment.md)
-  * [Gnome Extensions](./ubuntu/gnome-extensions.md)
-  * [Python C/C++ wrapper](./ubuntu/python.md)
-  * [SSH](./ubuntu/ssh.md)
-  * [Tools](./ubuntu/tools.md)
-  * [Yocto](./ubuntu/yocto.md)
+## Linux
+  * [Environment](./linux/environment.md)
+  * [Gnome Extensions](./linux/gnome-extensions.md)
+  * [Python C/C++ wrapper](./linux/python.md)
+  * [Scripts](./linux/scripts.md)
+  * [SSH](./linux/ssh.md)
+  * [Tools](./linux/tools.md)
+  * [Yocto](./linux/yocto.md)
