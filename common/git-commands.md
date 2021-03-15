@@ -1,3 +1,6 @@
+## Git docs
+    https://wiki.openstack.org/wiki/GitCommitMessages
+    https://chris.beams.io/posts/git-commit/
 
 ## A new repo from scratch
 
@@ -36,9 +39,6 @@
     go to my-branch branch 
     git merge master-r1 or git merge master
 
-## Git docs
-    https://wiki.openstack.org/wiki/GitCommitMessages
-    https://chris.beams.io/posts/git-commit/
 
 ## Git log
     git log --oneline
@@ -112,3 +112,24 @@
 
     git rev-list -n 1 --before="2016-10-07 1:00" origin/master
     git checkout `git rev-list -n 1 --before="2016-10-07 1:00" origin/master`
+
+## Undoing changes
+
+### Working directory
+
+    git checkout -- file.txt
+    git checkout .
+    git checkout clean -xdf
+
+### Staging area (Index)
+
+    git reset -- files.txt
+
+### Local branch
+
+    git reset HEAD^^ (HEAD~2)
+    git commit --amend -m "Commit message"
+
+### Remote repository
+
+    git revert <sha1>
