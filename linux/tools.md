@@ -52,6 +52,8 @@
 ## Visual Studio Code
     https://code.visualstudio.com/
     https://code.visualstudio.com/docs/setup/linux
+    
+    sudo code --user-data-dir=~/root
 
 ## Notepad++
     https://notepad-plus-plus.org/
@@ -121,4 +123,15 @@
     dmesg | grep tty
 
     sudo adduser $USER dialout
+
+## Terminator
+    https://github.com/gnome-terminator/terminator
+
+## System analyzer
+
+    systemd-analyze — Analyze and debug system manager
+
+
+    https://elinux.org/Bootchart
+    https://github.com/xrmx/bootchart
 
