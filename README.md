@@ -19,9 +19,11 @@ Useful information
   * [WSL](./win/WSL.md)
 
 ## Linux
+  * [Commands](./linux/cmd.md)
   * [Docker](./linux/docker.md)
   * [Environment](./linux/environment.md)
   * [Gnome Extensions](./linux/gnome-extensions.md)
+  * [Networking](./linux/networking.md)
   * [Python C/C++ wrapper](./linux/python.md)
   * [Scripts](./linux/scripts.md)
   * [SSH](./linux/ssh.md)
