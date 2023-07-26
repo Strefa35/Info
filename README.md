@@ -10,13 +10,16 @@ Useful information
   * [Git config](./common/git-config.md)
   * [RDK](./common/rdk.md)
   * [Time tracking](./common/time-tracking.md)
+  * [Yarn](./common/yarn.md)
   * [wxWidgets](./common/wxWidgets.md)
 
 ## Windows
   * [SSH](./win/ssh.md)
   * [Tools](./win/tools.md)
+  * [WSL](./win/WSL.md)
 
 ## Linux
+  * [Docker](./linux/docker.md)
   * [Environment](./linux/environment.md)
   * [Gnome Extensions](./linux/gnome-extensions.md)
   * [Python C/C++ wrapper](./linux/python.md)
