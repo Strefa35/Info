@@ -133,3 +133,15 @@
 ### Remote repository
 
     git revert <sha1>
+
+# git server
+    https://git-scm.com/book/en/v2/Git-on-the-Server-Setting-Up-the-Server
+
+    sudo useradd -m -r -U -d /home/git-repos git
+    # or  sudo su - git
+
+    su git
+
+    mkdir .ssh && chmod 700 .ssh
+    touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
+
