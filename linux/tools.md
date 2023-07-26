@@ -39,10 +39,15 @@
 
     sudo apt install gitg
 
-## Log explorer
+## Glogg - the fast, smart log explorer
     https://glogg.bonnefon.org/
+    https://github.com/nickbnf/glogg
 
     sudo apt install glogg
+
+## Klogg - Faster log explorer
+    https://klogg.filimonov.dev/
+    https://github.com/variar/klogg
 
 ## Visual diff and merge tools
     https://meldmerge.org/
@@ -84,6 +89,7 @@
     git clone https://github.com/so-fancy/diff-so-fancy.git
 
     git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+    git config --global interactive.diffFilter "diff-so-fancy --patch"
 
     ## modify .profile file 
 
@@ -93,7 +99,7 @@
     fi
 
     === as root ===
-    cd /usr/local/bin    
+    cd /usr/local/bin
     git clone https://github.com/so-fancy/diff-so-fancy.git
     git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
     vi /etc/environment
@@ -105,14 +111,35 @@
 ## git-forest
     https://github.com/takaaki-kasai/git-foresta
 
+    git config --global core.pager "git-foresta --all --style=10 | less -RSX"
+
+    git config --global core.pager "git-foresta --all --style=1 --graph-symbol-commit=★ --graph-symbol-tip=☆ --graph-margin-right=2 | less -RSX"
+
+ ## modify .profile file 
+
+  # set PATH to git-foresta tool if it exists
+    if [ -d "$HOME/.local/git-foresta" ] ; then
+      echo "GIT-FORESTA"
+      PATH="$HOME/.local/git-foresta:$PATH"
+    fi
+
+## git-delta - A syntax-highlighting pager for git, diff, and grep output
+	https://github.com/dandavison/delta
+
 ## Tig: text-mode interface for Git
     https://jonas.github.io/tig/
 
-## Screen & tmux
+## Screen
     https://www.gnu.org/software/screen/
 
 ## tmux
     https://github.com/tmux/tmux/wiki
+
+## Byobu
+    https://www.byobu.org/
+
+## Tmuxinator
+    https://github.com/tmuxinator/tmuxinator	
 
 ## minicom
     https://help.ubuntu.com/community/Minicom
