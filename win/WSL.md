@@ -35,8 +35,8 @@
 ## Network problem (Unable to ping host machine)
   https://github.com/microsoft/WSL/issues/4171
   
-# SSH server
-  https://www.illuminiastudios.com/dev-diaries/ssh-on-windows-subsystem-for-linux/
+# Open SSH server
+  [How to](https://ubuntu.com/server/docs/openssh-server)
 
   sudo apt install openssh-server
   
@@ -80,7 +80,7 @@
     
     eval `ssh-agent -s`; ssh-add ~/.ssh/slb_20220412/id_rsa
 
-# Develpp in remote containers using VS Code
+# Develop in remote containers using VS Code
     https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
     
     
