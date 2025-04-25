@@ -147,37 +147,37 @@
       
 # Docker socket inside the container
 
-  docker run -ti --rm -v /var/run/docker.sock:/var/run/docker.sock docker sh
+  ```docker run -ti --rm -v /var/run/docker.sock:/var/run/docker.sock docker sh```
   
-  docker info
+  ```docker info```
   
-  docker run -ti --rm ubuntu bash
+  ```docker run -ti --rm ubuntu bash```
   
   
 # Networking and namespaces
-
-  $ docker run -ti --net=host ubuntu:16.04 bash  
+  ```$ docker run -ti --net=host ubuntu:16.04 bash```
   
-  $ docker run -ti --rm --net=host --privileged=true ubuntu bash
+  ```$ docker run -ti --rm --net=host --privileged=true ubuntu bash```
   
-    sudo iptables -n -L -t nat
-    
-  $ docker inspect --format '{{.State.Pid}}' hello    
+  ```sudo iptables -n -L -t nat```
+  
+  ```$ docker inspect --format '{{.State.Pid}}' hello```
   
 # Storage
 
-    mount -o bind other-work work
+    ```mount -o bind other-work work```
     
 # Registries in detail
 
-  $ docker run -d -p 5000:5000 --restart=always --name registry registry:2
-  $ docker tag ubuntu:14.04 localhost:5000/mycompany/my-ubuntu:99
-  $ docker push localhost:5000/mycompany/my-ubuntu:99
+  ```$ docker run -d -p 5000:5000 --restart=always --name registry registry:2```
+  ```$ docker tag ubuntu:14.04 localhost:5000/mycompany/my-ubuntu:99```
+  ```$ docker push localhost:5000/mycompany/my-ubuntu:99```
     
-  $ docker images 
+  ```$ docker images```
   
-  $ docker save -o my-images.tar.gz debian:sid busybox ubuntu:14.04
+  ```$ docker save -o my-images.tar.gz debian:sid busybox ubuntu:14.04```
   
-  $ docker rmi debian:sid busybox ubuntu:14.04
+  ```$ docker rmi debian:sid busybox ubuntu:14.04```
   
-  $ docker load -i my-images.tar.gz
+  ```$ docker load -i my-images.tar.gz```
+  
