@@ -79,6 +79,44 @@
 
 ## Remmina
     https://remmina.org/
+## delta
+    https://github.com/dandavison/delta/
+
+    download: https://github.com/dandavison/delta/releases [musl version]
+    install: sudo apt install ./git-delta-musl_0.19.2_amd64.deb
+
+    ## modify .gitconfig
+
+    [core]
+    	pager = delta
+    
+    [interactive]
+    	diffFilter = delta --color-only
+    
+    [include]
+    	path = ~/.local/delta/themes.gitconfig
+    
+    [delta]
+    	true-color = always
+    	navigate = true
+    	hyperlinks = true
+    	hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+    	#dark = true
+    	#features = colibri
+    	#features = tangara-chilensis
+    	#features = mantis-shrimp
+    	#features = chameleon
+    	#features = mellow-barbet
+    	features = arctic-fox
+    	#features = platypus
+    	side-by-side = true
+    
+    [merge]
+    	conflictstyle = zdiff3
+    
+    [diff]
+    	colorMoved = default
+    
 
 ## diff-so-fancy
     https://github.com/so-fancy/diff-so-fancy
