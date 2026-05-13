@@ -1,21 +1,34 @@
-# Links:
-    http://manpages.ubuntu.com/manpages/focal/man5/core.5.html
+# Coredump
 
-## Checks ulimit
-    ulimit -c
+Reference: <http://manpages.ubuntu.com/manpages/focal/man5/core.5.html>
+
+## Check ulimit
+
+```bash
+ulimit -c
+ulimit -a
+```
 
 ## Set ulimit to unlimited
-    ulimit -c unlimited 
-    ulimit -a 
 
-##
-    cat /proc/sys/kernel/core_pattern
-    
-    
-## Build C++ program
-    g++ -Wall -g program.cpp
-    
+```bash
+ulimit -c unlimited
+```
+
+## Check core pattern
+
+```bash
+cat /proc/sys/kernel/core_pattern
+```
+
+## Build C++ program with debug info
+
+```bash
+g++ -Wall -g program.cpp
+```
+
 ## Run GDB
-    gdb <executable-file> <core-file>
-    
-    
+
+```bash
+gdb <executable-file> <core-file>
+```

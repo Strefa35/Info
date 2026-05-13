@@ -1,12 +1,17 @@
+# Time Tracking Tools
 
 ## Clockify
-    https://clockify.me/
 
-## OpenProject - Collaborative Project Management
-    https://www.openproject.org/
+<https://clockify.me/>
 
-## Kimai - Free Time-Tracking App (open-source)
-    https://www.kimai.org/
+## OpenProject — Collaborative Project Management
+
+<https://www.openproject.org/>
+
+## Kimai — Free Time-Tracking App (open-source)
+
+<https://www.kimai.org/>
 
 ## Redmine
-    https://www.redmine.org/
+
+<https://www.redmine.org/>

@@ -1,67 +1,78 @@
+# Networking
 
-# OSI Model
-  Open Systems Interconnect
+## OSI Model
 
-# Transport Layer Adressing
+Open Systems Interconnect.
 
-    Use port numbers.
+## Transport Layer Addressing
 
-  ## Port numbers
-  ```
-        0 -  1023 - well known
-     1024 - 49151 - registered
-    49152 - 65535 - temporary (ephemeral)
+Uses port numbers.
 
-    80      HTTP
-    443     HTTPs
-    20, 21  FTP
-    22      SSH
-    23      Telnet
+### Well-known ports
+
 ```
-# Application Layer Protocol Dependency
-```
-   | HTTP | HTTPs |   FTP  | SFTP | SMB |  POP3   |   IMAP  |  SMTP  | LDAPs |   LDAP  | TFTP |
-   |  80  | 443   | 20, 21 |  22  | 445 | 110/995 | 143/993 | 25/587 |  636  |   389   | 69   |
-   |                               TCP                                       | TCP/UDP | UDP  |
-   |                                         IP                                               |
-```
-# Transport Layer Protocol
+    0 –  1023  well known
+ 1024 – 49151  registered
+49152 – 65535  temporary (ephemeral)
 
-  TCP - Transport Control Protocol
-  UDP - User Datagram Protocol
-
-
-# Port numbers
-      0 -  1023 - well known
-   1024 - 49151 - registered
-  49152 - 65535 - temporary (ephemeral)
-
-
-# Classful Addressing
-```
-          | Class |        IP Range
-   Unicast|   A   | 0.0.0.0       127.255.255.255
-          |   B   | 128.0.0.0     191.255.255.255
-   _______|   C   | 192.0.0.0     223.255.255.255 ____
- Multicast|   D   | 224.0.0.0     239.255.255.255
-          |   E   | 240.0.0.0     255.255.255.255
+ 80       HTTP
+443       HTTPS
+20, 21    FTP
+22        SSH
+23        Telnet
 ```
 
-# Address Types
+## Application Layer Protocol Dependency
 
-  - Network Address   - identifier for a group of devices
-  - Broadcast Address - identifier for all devices on a network
-  - Host Address      - identifies unique device on a network
+| Protocol | HTTP | HTTPS | FTP    | SFTP | SMB | POP3    | IMAP    | SMTP   | LDAPS | LDAP | TFTP |
+|----------|------|-------|--------|------|-----|---------|---------|--------|-------|------|------|
+| Port     | 80   | 443   | 20, 21 | 22   | 445 | 110/995 | 143/993 | 25/587 | 636   | 389  | 69   |
+| Transport | TCP | TCP   | TCP    | TCP  | TCP | TCP     | TCP     | TCP    | TCP   | TCP/UDP | UDP |
 
-# Private IP Address
+## Transport Layer Protocol
+
+| Protocol | Full name |
+|----------|-----------|
+| TCP | Transmission Control Protocol |
+| UDP | User Datagram Protocol |
+
+## Port Numbers
+
 ```
-   10.0.0.0   |  10.255.255.255  |  10.0.0.0/8
-  172.16.0.0  | 172.31.255.255   | 172.16.0.0/12
-  192.168.0.0 | 192.168.255.255  | 192.168.0.0/16
+    0 –  1023  well known
+ 1024 – 49151  registered
+49152 – 65535  temporary (ephemeral)
 ```
-  ## APIPA - Avoid this
-    169.254.0.0/16
 
-  ## Loopback Address
-    127.0.0.1
+## Classful Addressing
 
+| Class | Type | IP Range |
+|-------|------|----------|
+| A | Unicast | 0.0.0.0 – 127.255.255.255 |
+| B | Unicast | 128.0.0.0 – 191.255.255.255 |
+| C | Unicast | 192.0.0.0 – 223.255.255.255 |
+| D | Multicast | 224.0.0.0 – 239.255.255.255 |
+| E | Reserved | 240.0.0.0 – 255.255.255.255 |
+
+## Address Types
+
+| Type | Description |
+|------|-------------|
+| Network Address | Identifier for a group of devices |
+| Broadcast Address | Identifier for all devices on a network |
+| Host Address | Identifies a unique device on a network |
+
+## Private IP Ranges
+
+| Range | Start | End | CIDR |
+|-------|-------|-----|------|
+| Class A | 10.0.0.0 | 10.255.255.255 | /8 |
+| Class B | 172.16.0.0 | 172.31.255.255 | /12 |
+| Class C | 192.168.0.0 | 192.168.255.255 | /16 |
+
+### Special addresses
+
+| Address | Purpose |
+|---------|---------|
+| 169.254.0.0/16 | APIPA — avoid this |
+| 127.0.0.1 | Loopback |

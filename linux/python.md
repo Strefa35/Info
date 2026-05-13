@@ -1,26 +1,29 @@
+# Python C/C++ Wrapper
 
-# Python C/C++ wrapper
+## Sites
 
-  ## Sites
+- <https://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/c++-wrapping.html>
+- <http://dvalts.io/code/2015/09/09/A-Cpp-python-wrapper.html>
 
-    https://intermediate-and-advanced-software-carpentry.readthedocs.io/en/latest/c++-wrapping.html
-    http://dvalts.io/code/2015/09/09/A-Cpp-python-wrapper.html
+## SWIG — Simplified Wrapper and Interface Generator
 
-  ## SWIG - Simplified Wrapper and Interface Generator
+- <http://www.swig.org/>
+- <http://www.swig.org/Doc4.0/Sections.html#Sections>
 
-    http://www.swig.org/
-    http://www.swig.org/Doc4.0/Sections.html#Sections
+### Install
 
-    sudo apt install swig
+```bash
+sudo apt install swig
+```
 
-  ## Commands
+### Usage
 
-    swig -python -c++ -o IInput.h IInput.i
+```bash
+swig -python -c++ -o IInput.h IInput.i
+```
 
+## SWIG & CMake
 
-  ## SWIG & CMake
-
-    https://cmake.org/cmake/help/latest/module/UseSWIG.html
-
-    http://matthiaskauer.com/2013/11/swig-for-python-cmake-and-a-speed-comparison/
-    https://github.com/danielunderwood/swig-example
+- <https://cmake.org/cmake/help/latest/module/UseSWIG.html>
+- <http://matthiaskauer.com/2013/11/swig-for-python-cmake-and-a-speed-comparison/>
+- [swig-example](https://github.com/danielunderwood/swig-example)

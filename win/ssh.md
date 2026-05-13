@@ -1,12 +1,17 @@
-# SSH Server on Win 10
-
+# SSH — Windows 10
 
 ## Generate SSH key
-    https://www.ssh.com/ssh/keygen
 
-    ssh-keygen -t rsa -b 4096 -C A.Czerwinski@pistacje.net
+Reference: <https://www.ssh.com/ssh/keygen>
 
-## SSH FS - mount remote file system
-    https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
+```powershell
+ssh-keygen -t rsa -b 4096 -C A.Czerwinski@pistacje.net
+```
 
-    sudo apt-get install sshfs
+## SSHFS — mount remote filesystem
+
+Reference: <https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh>
+
+```bash
+sudo apt-get install sshfs    # in WSL
+```

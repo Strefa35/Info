@@ -1,32 +1,37 @@
-# Links
-    https://wiki.gnome.org/Apps
-
-# Tools
+# Windows Tools
 
 ## Putty
-    https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
+
+<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>
 
 ## KeePass
-    https://keepass.info/
 
-## GUI client to view git repositories
-    https://www.sourcetreeapp.com/
+<https://keepass.info/>
 
-## Log explorer
-    https://glogg.bonnefon.org/
+## Git GUI — SourceTree
 
-## Visual diff and merge tools
-    https://meldmerge.org/
+<https://www.sourcetreeapp.com/>
+
+## Log explorer — Glogg
+
+<https://glogg.bonnefon.org/>
+
+## Visual diff and merge — Meld
+
+<https://meldmerge.org/>
 
 ## Visual Studio Code
-    https://code.visualstudio.com/
 
-## Hex Editor
-    https://mh-nexus.de/en/
+<https://code.visualstudio.com/>
+
+## Hex Editor — HxD
+
+<https://mh-nexus.de/en/>
 
 ## Notepad++
-    https://notepad-plus-plus.org/
+
+<https://notepad-plus-plus.org/>
 
 ## WinSCP
-    https://winscp.net
-    
+
+<https://winscp.net>

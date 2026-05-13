@@ -1,98 +1,126 @@
-# Install WSL
-  https://docs.microsoft.com/en-us/windows/wsl/install
+# WSL — Windows Subsystem for Linux
 
-  From PowerShell:
-    wsl --install
-    
-    wsl --install -d <DistroName> 
-    
+Reference: <https://docs.microsoft.com/en-us/windows/wsl/install>
+
+## Install
+
+```powershell
+wsl --install
+wsl --install -d <DistroName>
+```
+
 ## List available distros
-  wsl --list --online
+
+```powershell
+wsl --list --online
+```
 
 ## Check distro & IP
-  From PowerShell:
-    wsl -l -v
-    wsl -d "Ubuntu-20.04" hostname -I
+
+```powershell
+wsl -l -v
+wsl -d "Ubuntu-20.04" hostname -I
+```
 
 ## Static IP
-  If you don't want /etc/hosts, /etc/resolv.conf to change after restart, you can create /etc/wsl.conf
-    [network]
-    generateHosts = false
-    generateResolvConf = false
 
+To prevent `/etc/hosts` and `/etc/resolv.conf` from regenerating on restart, create `/etc/wsl.conf`:
 
-    In Windows 10, run CMD or Powershell with administrator privilege, and then execute the following two commands:
+```ini
+[network]
+generateHosts = false
+generateResolvConf = false
+```
 
-      :: Add an IP address in Ubuntu-20.04, 192.168.50.2, named eth0:1
-      wsl -d Ubuntu-20.04 -u root ip addr add 192.168.50.2/24 broadcast 192.168.50.255 dev eth0 label eth0:1
+Then in PowerShell (as Administrator):
 
-      :: Add an IP address in Win10, 192.168.50.20
-      netsh interface ip add address "vEthernet (WSL)" 192.168.50.20 255.255.255.0
+```powershell
+# Add IP address 192.168.50.2 to Ubuntu-20.04 on eth0:1
+wsl -d Ubuntu-20.04 -u root ip addr add 192.168.50.2/24 broadcast 192.168.50.255 dev eth0 label eth0:1
 
-    In the future, you will use 192.168.50.2 when you access Ubuntu, and 192.168.50.20 when you access Win10.
-    You can save the above two lines of commands as a .bat file, and then put it into the boot area, and let it execute automatically every time.
+# Add IP address 192.168.50.20 to Windows
+netsh interface ip add address "vEthernet (WSL)" 192.168.50.20 255.255.255.0
+```
 
-## Network problem (Unable to ping host machine)
-  https://github.com/microsoft/WSL/issues/4171
-  
-# Open SSH server
-  [How to](https://ubuntu.com/server/docs/openssh-server)
+Save these as a `.bat` file and add it to startup to run automatically.
 
-  sudo apt install openssh-server
-  
-  sudo vi /etc/ssh/sshd_config
-    PasswordAuthentication yes
-    AllowUsers yourusername
-    
-## Start or restart the SSH service    
-    service ssh status
-    
-    sudo service ssh start
-    sudo service ssh --full-restart
+## Network problem (unable to ping host machine)
 
-## Start SSH agent
+<https://github.com/microsoft/WSL/issues/4171>
 
-    eval `ssh-agent -s`; ssh-add ~/.ssh/slb/id_rsa
-    
-## Start SSH service without password    
-  sudo visudo
-    Find: %sudo ALL=NOPASSWD: /usr/sbin/sshd
-    Past after: %sudo  ALL=(ALL:ALL) ALL
+## OpenSSH Server
 
-# Docker on WSL
-	https://docs.docker.com/desktop/windows/wsl/
-	https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
+Reference: <https://ubuntu.com/server/docs/openssh-server>
 
-## SSH FS - mount remote file system
-    https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh
+```bash
+sudo apt install openssh-server
 
-    https://github.com/winfsp/winfsp/releases
-    https://github.com/winfsp/sshfs-win
+sudo vi /etc/ssh/sshd_config
+# Set:
+#   PasswordAuthentication yes
+#   AllowUsers yourusername
+```
 
-     \\sshfs\user@host
-     
-# Setup after WSL started
+### Start / restart SSH
 
-    service ssh status
-    
-    sudo service ssh start
-    sudo service ssh --full-restart
-    
-    eval `ssh-agent -s`; ssh-add ~/.ssh/slb_20220412/id_rsa
+```bash
+service ssh status
+sudo service ssh start
+sudo service ssh --full-restart
+```
 
-# Develop in remote containers using VS Code
-    https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
-    
-    
-# Python
+### Start SSH agent
 
-    sudo apt-get install python python3
+```bash
+eval `ssh-agent -s`
+ssh-add ~/.ssh/slb/id_rsa
+```
 
-	sudo apt-get install python-pip python3-pip
+### Start SSH service without password prompt
 
+```bash
+sudo visudo
+# Find:   %sudo  ALL=(ALL:ALL) ALL
+# Paste after:  %sudo ALL=NOPASSWD: /usr/sbin/sshd
+```
 
-    update-alternatives --install /usr/bin/python python /usr/bin/python3.5 1
-    update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2
-    update-alternatives --config python
+## Docker on WSL
 
+- <https://docs.docker.com/desktop/windows/wsl/>
+- <https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers>
 
+## SSHFS — mount remote filesystem
+
+Reference: <https://www.digitalocean.com/community/tutorials/how-to-use-sshfs-to-mount-remote-file-systems-over-ssh>
+
+- [WinFsp](https://github.com/winfsp/winfsp/releases)
+- [sshfs-win](https://github.com/winfsp/sshfs-win)
+
+```
+\\sshfs\user@host
+```
+
+## Setup after WSL start
+
+```bash
+service ssh status
+sudo service ssh start
+sudo service ssh --full-restart
+
+eval `ssh-agent -s`
+ssh-add ~/.ssh/slb_20220412/id_rsa
+```
+
+## Develop in remote containers using VS Code
+
+<https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers>
+
+## Python
+
+```bash
+sudo apt-get install python3 python3-pip
+
+update-alternatives --install /usr/bin/python python /usr/bin/python3.5 1
+update-alternatives --install /usr/bin/python python /usr/bin/python2.7 2
+update-alternatives --config python
+```

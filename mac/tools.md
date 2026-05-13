@@ -1,31 +1,41 @@
-# Tools
+# Mac Tools
 
 ## XCode
-  - Download the specific Xcode version: (https://xcodereleases.com/)
-  - Add the downloaded Xcode.xip in Applications
-  - Double click on it, it will start expand. It will take some time.
-  - If you have multiple Xcode version like 12.0, 12.1 in Applications rename it accordingly.
-  - Double click on extracted Xcode version and install tools.
-  - To set default Xcode version run this command:
-    - sudo xcode-select -switch /Applications/Xcode.app
-  - To check default Xcode version in your system use this command:
-    - /usr/bin/xcodebuild -version    
+
+- Download a specific Xcode version: <https://xcodereleases.com/>
+- Add the downloaded `Xcode.xip` to `/Applications` and double-click to expand.
+- If you have multiple Xcode versions, rename them (e.g. `Xcode-12.0.app`, `Xcode-12.1.app`).
+
+```bash
+# Set default Xcode version
+sudo xcode-select -switch /Applications/Xcode.app
+
+# Check default Xcode version
+/usr/bin/xcodebuild -version
+```
 
 ## Homebrew
-  - Manual: https://treehouse.github.io/installation-guides/mac/homebrew
-  - Install: /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
-## Atom - text editor
-    https://atom.io
+Reference: <https://brew.sh>
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
 
 ## Midnight Commander
-    brew install mc
 
-## Glogg - Log explorer
-    https://glogg.bonnefon.org/
+```bash
+brew install mc
+```
+
+## Glogg — Log explorer
+
+<https://glogg.bonnefon.org/>
 
 ## diff-so-fancy
-    https://github.com/so-fancy/diff-so-fancy
+
+<https://github.com/so-fancy/diff-so-fancy>
 
 ## git-foresta
-    https://github.com/takaaki-kasai/git-foresta
+
+<https://github.com/takaaki-kasai/git-foresta>

@@ -1,202 +1,254 @@
-# Links:
-    https://wiki.gnome.org/Apps
+# Linux Tools
 
-# Tools
-
+Reference: <https://wiki.gnome.org/Apps>
 
 ## GNOME Tweaks
-    https://itsfoss.com/gnome-tweak-tool/
 
-    sudo add-apt-repository universe
-    sudo apt install gnome-tweak-tool
+Reference: <https://itsfoss.com/gnome-tweak-tool/>
 
-    gnome-tweaks
+```bash
+sudo add-apt-repository universe
+sudo apt install gnome-tweak-tool
+gnome-tweaks
+```
 
 ## KeePass
-    https://keepass.info/
 
-    sudo apt-add-repository ppa:jtaylor/keepass
-    sudo apt-get update
-    sudo apt-get install keepass2
+<https://keepass.info/>
+
+```bash
+sudo apt-add-repository ppa:jtaylor/keepass
+sudo apt-get update
+sudo apt-get install keepass2
+```
 
 ## Net Tools
-    sudo apt install net-tools
+
+```bash
+sudo apt install net-tools
+```
 
 ## automake
-    sudo apt install automake
+
+```bash
+sudo apt install automake
+```
 
 ## htop
-    https://hisham.hm/htop/
 
-    sudo apt install htop
+<https://hisham.hm/htop/>
+
+```bash
+sudo apt install htop
+```
 
 ## Putty
-    https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html
-    https://websiteforstudents.com/installing-putty-on-ubuntu-16-04-17-10-18-04/
 
-## GUI client to view git repositories
-    https://wiki.gnome.org/Apps/Gitg/
+- <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>
+- <https://websiteforstudents.com/installing-putty-on-ubuntu-16-04-17-10-18-04/>
 
-    sudo apt install gitg
+## Gitg — GUI git client
 
-## Glogg - the fast, smart log explorer
-    https://glogg.bonnefon.org/
-    https://github.com/nickbnf/glogg
+<https://wiki.gnome.org/Apps/Gitg/>
 
-    sudo apt install glogg
+```bash
+sudo apt install gitg
+```
 
-## Klogg - Faster log explorer
-    https://klogg.filimonov.dev/
-    https://github.com/variar/klogg
+## Glogg — fast, smart log explorer
 
-## Visual diff and merge tools
-    https://meldmerge.org/
+- <https://glogg.bonnefon.org/>
+- <https://github.com/nickbnf/glogg>
 
-    sudo apt install meld
+```bash
+sudo apt install glogg
+```
+
+## Klogg — faster log explorer
+
+- <https://klogg.filimonov.dev/>
+- <https://github.com/variar/klogg>
+
+## Meld — visual diff and merge
+
+<https://meldmerge.org/>
+
+```bash
+sudo apt install meld
+```
 
 ## Visual Studio Code
-    https://code.visualstudio.com/
-    https://code.visualstudio.com/docs/setup/linux
-    
-    sudo code --user-data-dir=~/root
+
+- <https://code.visualstudio.com/>
+- <https://code.visualstudio.com/docs/setup/linux>
+
+```bash
+sudo code --user-data-dir=~/root
+```
 
 ## Notepad++
-    https://notepad-plus-plus.org/
 
-    sudo snap install notepad-plus-plus
+<https://notepad-plus-plus.org/>
+
+```bash
+sudo snap install notepad-plus-plus
+```
 
 ## Notepadqq
-    https://itsfoss.com/notepadqq-notepad-for-linux/
 
-    sudo add-apt-repository ppa:notepadqq-team/notepadqq
-    sudo apt-get update
-    sudo apt-get install notepadqq
+<https://itsfoss.com/notepadqq-notepad-for-linux/>
+
+```bash
+sudo add-apt-repository ppa:notepadqq-team/notepadqq
+sudo apt-get update
+sudo apt-get install notepadqq
+```
 
 ## Kitty Terminal
-    https://sw.kovidgoyal.net/kitty
 
-    https://sw.kovidgoyal.net/kitty/binary.html#desktop-integration-on-linux
+- <https://sw.kovidgoyal.net/kitty>
+- <https://sw.kovidgoyal.net/kitty/binary.html#desktop-integration-on-linux>
 
 ## Remmina
-    https://remmina.org/
-## delta
-    https://github.com/dandavison/delta/
 
-    download: https://github.com/dandavison/delta/releases [musl version]
-    install: sudo apt install ./git-delta-musl_0.19.2_amd64.deb
+<https://remmina.org/>
 
-    ## modify .gitconfig
+## delta — syntax-highlighting pager for git/diff/grep
 
-    [core]
-    	pager = delta
-    
-    [interactive]
-    	diffFilter = delta --color-only
-    
-    [include]
-    	path = ~/.local/delta/themes.gitconfig
-    
-    [delta]
-    	true-color = always
-    	navigate = true
-    	hyperlinks = true
-    	hyperlinks-file-link-format = "vscode://file/{path}:{line}"
-    	#dark = true
-    	#features = colibri
-    	#features = tangara-chilensis
-    	#features = mantis-shrimp
-    	#features = chameleon
-    	#features = mellow-barbet
-    	features = arctic-fox
-    	#features = platypus
-    	side-by-side = true
-    
-    [merge]
-    	conflictstyle = zdiff3
-    
-    [diff]
-    	colorMoved = default
-    
+<https://github.com/dandavison/delta/>
+
+### Install
+
+Download the musl `.deb` from <https://github.com/dandavison/delta/releases>:
+
+```bash
+sudo apt install ./git-delta-musl_0.19.2_amd64.deb
+```
+
+### Configure `~/.gitconfig`
+
+```ini
+[core]
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[include]
+    path = ~/.local/delta/themes.gitconfig
+
+[delta]
+    true-color = always
+    navigate = true
+    hyperlinks = true
+    hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+    features = arctic-fox
+    side-by-side = true
+
+[merge]
+    conflictstyle = zdiff3
+
+[diff]
+    colorMoved = default
+```
 
 ## diff-so-fancy
-    https://github.com/so-fancy/diff-so-fancy
 
-    mkdir ~/.local/diff-so-fancy
+<https://github.com/so-fancy/diff-so-fancy>
 
-    cd ~/.local/
-    git clone https://github.com/so-fancy/diff-so-fancy.git
+### Install (as user)
 
-    git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-    git config --global interactive.diffFilter "diff-so-fancy --patch"
+```bash
+cd ~/.local/
+git clone https://github.com/so-fancy/diff-so-fancy.git
 
-    ## modify .profile file 
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+git config --global interactive.diffFilter "diff-so-fancy --patch"
+```
 
-    # set PATH to diff-so-fancy tool if it exists
-    if [ -d "$HOME/.local/diff-so-fancy" ] ; then
-        PATH="$HOME/.local/diff-so-fancy:$PATH"
-    fi
+Add to `~/.profile`:
 
-    === as root ===
-    cd /usr/local/bin
-    git clone https://github.com/so-fancy/diff-so-fancy.git
-    git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-    vi /etc/environment
-    add path to PATH="... :/usr/local/bin/diff-so-fency"
+```bash
+if [ -d "$HOME/.local/diff-so-fancy" ]; then
+    PATH="$HOME/.local/diff-so-fancy:$PATH"
+fi
+```
+
+### Install (as root)
+
+```bash
+cd /usr/local/bin
+git clone https://github.com/so-fancy/diff-so-fancy.git
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+# Add /usr/local/bin/diff-so-fancy to PATH in /etc/environment
+```
 
 ## Git scripts
-    https://github.com/jwiegley/git-scripts
 
-## git-forest
-    https://github.com/takaaki-kasai/git-foresta
+<https://github.com/jwiegley/git-scripts>
 
-    git config --global core.pager "git-foresta --all --style=10 | less -RSX"
+## git-foresta
 
-    git config --global core.pager "git-foresta --all --style=1 --graph-symbol-commit=★ --graph-symbol-tip=☆ --graph-margin-right=2 | less -RSX"
+<https://github.com/takaaki-kasai/git-foresta>
 
- ## modify .profile file 
+```bash
+git config --global core.pager "git-foresta --all --style=10 | less -RSX"
 
-  # set PATH to git-foresta tool if it exists
-    if [ -d "$HOME/.local/git-foresta" ] ; then
-      echo "GIT-FORESTA"
-      PATH="$HOME/.local/git-foresta:$PATH"
-    fi
+git config --global core.pager "git-foresta --all --style=1 \
+  --graph-symbol-commit=★ --graph-symbol-tip=☆ \
+  --graph-margin-right=2 | less -RSX"
+```
 
-## git-delta - A syntax-highlighting pager for git, diff, and grep output
-	https://github.com/dandavison/delta
+Add to `~/.profile`:
 
-## Tig: text-mode interface for Git
-    https://jonas.github.io/tig/
+```bash
+if [ -d "$HOME/.local/git-foresta" ]; then
+    PATH="$HOME/.local/git-foresta:$PATH"
+fi
+```
+
+## Tig — text-mode interface for Git
+
+<https://jonas.github.io/tig/>
 
 ## Screen
-    https://www.gnu.org/software/screen/
+
+<https://www.gnu.org/software/screen/>
 
 ## tmux
-    https://github.com/tmux/tmux/wiki
+
+<https://github.com/tmux/tmux/wiki>
 
 ## Byobu
-    https://www.byobu.org/
+
+<https://www.byobu.org/>
 
 ## Tmuxinator
-    https://github.com/tmuxinator/tmuxinator	
 
-## minicom
-    https://help.ubuntu.com/community/Minicom
-    http://manpages.ubuntu.com/manpages/trusty/man1/minicom.1.html
+<https://github.com/tmuxinator/tmuxinator>
 
-    sudo apt-get install minicom
+## minicom — serial communication
 
-    dmesg | grep tty
+- <https://help.ubuntu.com/community/Minicom>
+- <http://manpages.ubuntu.com/manpages/trusty/man1/minicom.1.html>
 
-    sudo adduser $USER dialout
+```bash
+sudo apt-get install minicom
+
+dmesg | grep tty
+
+sudo adduser $USER dialout
+```
 
 ## Terminator
-    https://github.com/gnome-terminator/terminator
+
+<https://github.com/gnome-terminator/terminator>
 
 ## System analyzer
 
-    systemd-analyze — Analyze and debug system manager
+```bash
+systemd-analyze    # analyze and debug system manager
+```
 
-
-    https://elinux.org/Bootchart
-    https://github.com/xrmx/bootchart
-
+- [Bootchart](https://elinux.org/Bootchart)
+- <https://github.com/xrmx/bootchart>

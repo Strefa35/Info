@@ -1,46 +1,60 @@
-# Analyze Text File
+# Linux Commands
 
-  head - display top n lines
-  tail - display bottom n lines
-  cut  - display  certain columns
-  sort - organize data in columns
-  
-  more
-  less - page through the file
+## Analyze Text Files
 
-  cat
-  tac
+| Command | Description |
+|---------|-------------|
+| `head`  | Display top N lines |
+| `tail`  | Display bottom N lines |
+| `cut`   | Display certain columns |
+| `sort`  | Organize data in columns |
+| `more`  | Page through a file |
+| `less`  | Page through a file (with search) |
+| `cat`   | Print file contents |
+| `tac`   | Print file contents in reverse |
 
+## Prevent overwrites with noclobber
 
+```bash
+set -o noclobber
+ls /etc >| file1    # force overwrite when noclobber is set
+```
 
-# Prevent overwrites with noclobber
-  set -o
-  set -o noclobber - 
-  ls /etc >| file1
+## Named pipes
 
-# Named pipes are created with mkfifo
-  mkfifo /tmp/fifo1
-  
-# tee
+```bash
+mkfifo /tmp/fifo1
+```
 
-  ls /etc | tee filename
-  
-  
-# Top administrator manages processes
-                       {   top   }
-                 { killall } {  uptime  }
-           {    ps   } {  pgrep  } {  pkill  }
-    {    bg   } {    fg   } {  jobs   } {   kill  }
-    
-    
-# procps
+## tee — write to file and stdout simultaneously
 
-  dpkg -L procps
-  
-# uptime
+```bash
+ls /etc | tee filename
+```
 
+## Process Management
 
-# Jobs
+```
+           top
+     killall     uptime
+  ps    pgrep    pkill
+bg   fg   jobs   kill
+```
 
-    $ jobs
-  
+### procps
+
+```bash
+dpkg -L procps
+```
+
+### uptime
+
+```bash
+uptime
+```
+
+### Jobs
+
+```bash
+jobs
+```
